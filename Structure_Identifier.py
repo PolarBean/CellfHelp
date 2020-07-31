@@ -67,7 +67,7 @@ class Window(Frame):
             
             labelbutton.place(x=10, y=150)
             
-            quickview = Button(self, text="quickview your coordinates", command=lambda: dimensionvisual)
+   
             
     
         
@@ -116,55 +116,6 @@ class Window(Frame):
             path=(os.path.abspath(path+"_output"+thetime))
             self.path= path+"\\" 
         
-        def generate3d(self):
-            
-
-
-
-            spheres = [ vtk.vtkSphereSource() for _ in (range(len(self.my_data)))]
-
-
-            colors = vtk.vtkNamedColors()
-            appendFilter=vtk.vtkAppendPolyData()
-            # Create a sphere
-
-            for i in (range(len(self.my_data))):
-                spheres[i].SetCenter(i, i, i)
-                spheres[i].SetRadius(10)
-                spheres[i].Update()
-                appendFilter.AddInputData(spheres[i].GetOutput())
-
-                appendFilter.Update()
-                
-
-            appendFilter.Update()
-            writer=vtk.vtkPolyDataWriter()
-            writer.SetInputData(appendFilter.GetOutput())
-            writer.SetFileName('abc.vtk')
-            writer.Update()
-            
-            mapper = vtk.vtkPolyDataMapper()
-            mapper.SetInputConnection(appendFilter.GetOutputPort())
-
-            actor = vtk.vtkActor()
-            actor.SetMapper(mapper)
-            actor.GetProperty().SetColor(colors.GetColor3d("Cornsilk"))
-
-            renderer = vtk.vtkRenderer()
-            renderWindow = vtk.vtkRenderWindow()
-            renderWindow.SetWindowName("Sphere")
-            renderWindow.AddRenderer(renderer)
-            renderWindowInteractor = vtk.vtkRenderWindowInteractor()
-            renderWindowInteractor.SetRenderWindow(renderWindow)
-
-            renderer.AddActor(actor)
-            renderer.SetBackground(colors.GetColor3d("LightBlue"))
-
-            renderWindow.Render()
-            renderWindowInteractor.Start()
-
-            self.mylist.insert(END, self.path+'my_data.nrrd')
-
 
             
         def Append(self):
