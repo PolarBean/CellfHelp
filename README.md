@@ -4,5 +4,5 @@ Do you have a dataset of xyz neuron coordinates within allen brain space? With t
 # GUI preview
 
 With our GUI you can graph brain regions and generate CSV files of where your xyz points lie within the Allen Common Coordinate Framework. 
-![alt text](https://github.com/PolarBean/CellfHelp/blob/master/main%20GUI%20CellfHelp.png?raw=true)
+![](https://github.com/PolarBean/CellfHelp/blob/master/main%20GUI%20CellfHelp.png | height=50)
 
