@@ -1,5 +1,5 @@
-# CellfHelp
-Do you have a dataset of xyz neuron coordinates within allen brain space? With this tool you can find exactly which brain region each xyz point lies in.
+# CellfHelp Mouse
+Do you have a dataset of xyz mouse neuron coordinates within allen mouse brain space? With this tool you can find exactly which brain region each xyz point lies in.
 
 # GUI preview
 
