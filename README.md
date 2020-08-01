@@ -1,7 +1,7 @@
 # CellfHelp Mouse
 Do you have a dataset of xyz mouse neuron coordinates within allen mouse brain space? With this tool you can find exactly which brain region each xyz point lies in.
 
-# GUI preview
+## GUI preview
 
 With our GUI you can graph brain regions and generate CSV files of where your xyz points lie within the Allen Common Coordinate Framework. 
 
